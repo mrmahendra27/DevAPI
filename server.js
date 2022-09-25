@@ -8,7 +8,9 @@ const app = express();
 
 const PORT = process.env.PORT;
 
-app.get("/", (req, res) => res.send("Hello World"));
+const bootcamp = require("./routes/bootcamp");
+
+app.use("/api/v1/bootcamp", bootcamp);
 
 app.listen(
   PORT,
