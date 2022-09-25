@@ -15,10 +15,7 @@ exports.getBootcamps = async (req, res, next) => {
       data: bootcamps,
     });
   } catch (err) {
-    res.status(400).json({
-      status: false,
-      data: err,
-    });
+    next(err);
   }
 };
 
@@ -42,10 +39,7 @@ exports.getBootcamp = async (req, res, next) => {
       data: bootcamp,
     });
   } catch (err) {
-    res.status(400).json({
-      status: false,
-      data: err,
-    });
+    next(err);
   }
 };
 
@@ -63,10 +57,7 @@ exports.createBootcamp = async (req, res, next) => {
       data: bootcamp,
     });
   } catch (err) {
-    res.status(400).json({
-      status: false,
-      data: err,
-    });
+    next(err);
   }
 };
 
@@ -93,10 +84,7 @@ exports.updateBootcamp = async (req, res, next) => {
       data: bootcamp,
     });
   } catch (err) {
-    res.status(400).json({
-      status: false,
-      data: err,
-    });
+    next(err);
   }
 };
 
@@ -119,9 +107,6 @@ exports.deleteBootcamp = async (req, res, next) => {
       status: true,
     });
   } catch (err) {
-    res.status(400).json({
-      status: false,
-      data: err,
-    });
+    next(err);
   }
 };
