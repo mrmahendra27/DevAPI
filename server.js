@@ -29,7 +29,7 @@ const bootcamp = require("./routes/bootcamp");
 //Mount routers
 app.use("/api/v1/bootcamp", bootcamp);
 
-//Loading middleware
+//Loading error handling middleware
 app.use(errorHandler);
 
 const server = app.listen(
